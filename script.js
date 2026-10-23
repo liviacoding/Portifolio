@@ -116,6 +116,7 @@
       "contact.email": "E-mail",
       "contact.whatsapp": "WhatsApp",
 
+      "footer.email": "E-mail",
       "footer.tagline":
         "Desenvolvimento de software, sites e aplicativos com interesse em inteligência artificial.",
       "footer.navLabel": "Navegação do rodapé",
@@ -225,6 +226,7 @@
       "contact.email": "Email",
       "contact.whatsapp": "WhatsApp",
 
+      "footer.email": "Email",
       "footer.tagline":
         "Software, website and application development with a growing interest in artificial intelligence.",
       "footer.navLabel": "Footer navigation",
