@@ -4,30 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="author" content="Lívia Soares Lopes">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#F4F5F0">
 
-  <!-- Título e metadescrição (são trocados dinamicamente pelo script.js conforme o idioma) -->
-  <title id="page-title" data-i18n="meta.title">Lívia Soares Lopes | Desenvolvimento Web, Software e IA</title>
-  <meta id="page-description" name="description" data-i18n="meta.description" content="Portfólio de Lívia Soares Lopes, estudante de Ciência da Computação e estagiária em Engenharia de IA na Ohmyweb, em Dubai. Desenvolvimento web, aplicativos e soluções digitais.">
+  <!-- Título e metadescrição (trocados dinamicamente pelo script.js conforme o idioma) -->
+  <title id="page-title" data-i18n="meta.title">Lívia Soares Lopes | Desenvolvimento web, software e IA</title>
+  <meta id="page-description" name="description" data-i18n="meta.description" content="Portfólio de Lívia Soares Lopes, estudante de Ciência da Computação e estagiária em Engenharia de IA na Ohmyweb, em Dubai. Sites, aplicativos e soluções digitais.">
   <link rel="canonical" href="./index.html">
 
   <!-- Compartilhamento em redes sociais -->
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Lívia Soares Lopes">
-  <meta property="og:title" data-i18n="meta.title" content="Lívia Soares Lopes | Desenvolvimento Web, Software e IA">
-  <meta property="og:description" data-i18n="meta.description" content="Portfólio de Lívia Soares Lopes, estudante de Ciência da Computação e estagiária em Engenharia de IA na Ohmyweb, em Dubai. Desenvolvimento web, aplicativos e soluções digitais.">
+  <meta property="og:title" data-i18n="meta.title" content="Lívia Soares Lopes | Desenvolvimento web, software e IA">
+  <meta property="og:description" data-i18n="meta.description" content="Portfólio de Lívia Soares Lopes, estudante de Ciência da Computação e estagiária em Engenharia de IA na Ohmyweb, em Dubai. Sites, aplicativos e soluções digitais.">
   <meta property="og:image" content="assets/foto-livia.jpg">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" data-i18n="meta.title" content="Lívia Soares Lopes | Desenvolvimento Web, Software e IA">
-  <meta name="twitter:description" data-i18n="meta.description" content="Portfólio de Lívia Soares Lopes, estudante de Ciência da Computação e estagiária em Engenharia de IA na Ohmyweb, em Dubai. Desenvolvimento web, aplicativos e soluções digitais.">
+  <meta name="twitter:title" data-i18n="meta.title" content="Lívia Soares Lopes | Desenvolvimento web, software e IA">
+  <meta name="twitter:description" data-i18n="meta.description" content="Portfólio de Lívia Soares Lopes, estudante de Ciência da Computação e estagiária em Engenharia de IA na Ohmyweb, em Dubai. Sites, aplicativos e soluções digitais.">
   <meta name="twitter:image" content="assets/foto-livia.jpg">
 
-  <!-- Tipografia -->
+  <!-- Tipografia: Fraunces (títulos) + Instrument Sans (texto e interface) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:ital,wght@0,400..700;1,400..600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -44,7 +44,7 @@
         <span class="brand-mark" aria-hidden="true">LS</span>
         <span class="brand-text">
           <span class="brand-name">Lívia Soares Lopes</span>
-          <span class="brand-role" data-i18n="brand.role">Desenvolvimento Web · IA</span>
+          <span class="brand-role" data-i18n="brand.role">Sites e aplicativos</span>
         </span>
       </a>
 
@@ -52,14 +52,28 @@
         <ul class="nav-list">
           <li><a href="#inicio" class="nav-link" data-i18n="nav.home">Início</a></li>
           <li><a href="#sobre" class="nav-link" data-i18n="nav.about">Sobre</a></li>
-          <li><a href="#competencias" class="nav-link" data-i18n="nav.skills">Competências</a></li>
+          <li><a href="#competencias" class="nav-link" data-i18n="nav.skills">O que eu faço</a></li>
           <li><a href="#experiencia" class="nav-link" data-i18n="nav.experience">Experiência</a></li>
           <li><a href="#contato" class="nav-link" data-i18n="nav.contact">Contato</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <!-- Seletor de idioma discreto -->
+        <!-- Tema claro / escuro -->
+        <button type="button" class="icon-btn theme-btn" id="theme-toggle" aria-pressed="false"
+                data-i18n-attr="aria-label:theme.label" aria-label="Alternar tema claro e escuro">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.4M12 19v2.4M2.6 12H5m14 0h2.4M5.2 5.2l1.7 1.7M17.1 17.1l1.7 1.7M18.8 5.2l-1.7 1.7M6.9 17.1l-1.7 1.7"/></svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 14.2A8.6 8.6 0 0 1 9.8 3.4 8.6 8.6 0 1 0 20.6 14.2Z"/></svg>
+        </button>
+
+        <!-- Música ambiente -->
+        <button type="button" class="icon-btn sound-btn" id="sound-toggle" aria-pressed="false"
+                data-i18n-attr="aria-label:sound.enable" aria-label="Ativar música ambiente">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18.5V6.3l9.5-2.4v12.1"/><circle cx="6.4" cy="18.5" r="2.6"/><circle cx="15.9" cy="16" r="2.6"/></svg>
+          <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+
+        <!-- Seletor de idioma -->
         <div class="lang-switch" role="group" data-i18n-attr="aria-label:lang.label" aria-label="Selecionar idioma">
           <button type="button" class="lang-btn is-active" data-lang="pt" aria-pressed="true" data-i18n-attr="aria-label:lang.pt" aria-label="Português (PT)">PT</button>
           <span class="lang-sep" aria-hidden="true"></span>
@@ -81,81 +95,98 @@
     <section class="section hero" id="inicio">
       <div class="container hero-inner">
         <div class="hero-content">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Brasil · Atuação nacional e internacional</p>
+          <p class="hero-hello h1-in" data-i18n="hero.hello">Olá, eu sou a Lívia</p>
 
-          <h1 class="hero-title">Lívia Soares Lopes</h1>
+          <h1 class="hero-title">
+            <span class="h1-in" data-i18n="hero.t1">Escuto, desenho e</span>
+            <span class="title-fancy h1-in">
+              <span class="fancy-word">
+                <span data-i18n="hero.fancy">construo</span>
+                <svg class="scribble" viewBox="0 0 300 34" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+                  <path d="M8 24 C 60 10, 118 30, 168 18 S 268 12, 294 20" fill="none"/>
+                </svg>
+              </span>
+            </span>
+            <span class="h1-in" data-i18n="hero.t2">soluções digitais.</span>
+          </h1>
 
-          <p class="hero-role" data-i18n="hero.role">Estudante de Ciência da Computação | Estagiária em Engenharia de IA | Desenvolvedora Web e de Aplicativos</p>
+          <p class="hero-text h1-in" data-i18n="hero.text">Sou estudante de Ciência da Computação e estagiária em Engenharia de IA na Ohmyweb, em Dubai. No dia a dia, desenvolvo sites e aplicativos, transformando problemas reais em tecnologia que funciona de verdade.</p>
 
-          <p class="hero-text" data-i18n="hero.text">Transformo ideias em soluções digitais funcionais, combinando desenvolvimento de software, criatividade e interesse por inteligência artificial. Sou estudante de Ciência da Computação e estagiária na área de Engenharia de IA na Ohmyweb, conectando minha formação tecnológica a desafios reais e oportunidades de inovação.</p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#competencias" data-i18n="hero.cta1">Conheça minhas competências</a>
-            <a class="btn btn-ghost" href="#contato" data-i18n="hero.cta2">Entre em contato</a>
+          <div class="hero-actions h1-in">
+            <a class="btn btn-primary" href="https://wa.me/5547933835061" target="_blank" rel="noopener noreferrer">
+              <svg class="icon icon-xs" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5 5 16.8A8 8 0 1 1 8 19.3Z"/></svg>
+              <span data-i18n="hero.cta1">Falar no WhatsApp</span>
+            </a>
+            <a class="btn btn-ghost" href="mailto:liviasoares.tech@gmail.com">
+              <svg class="icon icon-xs" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+              <span data-i18n="hero.cta2">Enviar e-mail</span>
+            </a>
           </div>
 
-          <ul class="hero-meta" aria-label="Informações rápidas">
+          <ul class="hero-meta h1-in" aria-label="Informações rápidas">
             <li class="hero-meta-item">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>
-              <span data-i18n="hero.meta.company">Ohmyweb · Dubai, Emirados Árabes Unidos</span>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15 0 18M12 3c-2.5 2.7-2.5 15 0 18"/></svg>
+              <span data-i18n="hero.meta.company">Estagiária em Engenharia de IA · Ohmyweb, Dubai</span>
             </li>
             <li class="hero-meta-item">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-              <span data-i18n="hero.meta.availability">Disponível para novos projetos e colaborações</span>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span data-i18n="hero.meta.location">Base no Brasil</span>
+            </li>
+            <li class="hero-meta-item">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.6"/><path d="M12 3v2.4M12 18.6V21"/></svg>
+              <span data-i18n="hero.meta.availability">Aberta a novos projetos</span>
             </li>
           </ul>
         </div>
 
         <div class="hero-visual">
-          <figure class="photo-frame">
+          <figure class="photo-frame h1-in h1-in-late">
             <!-- Enquadramento vertical da fotografia: ajuste object-position em style.css se necessário -->
             <img src="assets/foto-livia.jpg" width="1254" height="1254" decoding="async"
                  alt="Foto de Lívia Soares Lopes" data-i18n-attr="alt:hero.photoAlt">
           </figure>
-          <p class="photo-caption" data-i18n="hero.caption">Lívia Soares Lopes · Brasil</p>
+          <p class="photo-caption h1-in h1-in-late" data-i18n="hero.caption">Lívia Soares Lopes, no Brasil</p>
         </div>
       </div>
     </section>
 
     <!-- ====================== SOBRE ====================== -->
-    <section class="section section-soft" id="sobre">
+    <section class="section" id="sobre">
       <div class="container">
-        <header class="section-head">
-          <p class="eyebrow" data-i18n="about.eyebrow">Sobre</p>
+        <header class="section-head reveal">
           <h2 class="section-title" data-i18n="about.title">Sobre mim</h2>
           <p class="section-lead" data-i18n="about.lead">Uma trajetória guiada por tecnologia, curiosidade e vontade de transformar problemas reais em soluções digitais.</p>
         </header>
 
         <div class="about-grid">
-          <div class="about-text">
-            <p data-i18n="about.p1">Meu nome é Lívia Soares Lopes, tenho 24 anos e sou estudante de Ciência da Computação. Minha trajetória é orientada pelo interesse em tecnologia, desenvolvimento de software e criação de soluções digitais que possam resolver problemas reais.</p>
-            <p data-i18n="about.p2">Atualmente, sou estagiária na área de Engenharia de Inteligência Artificial na Ohmyweb, empresa localizada em Dubai, nos Emirados Árabes Unidos, atuando também como representante da empresa no Brasil.</p>
-            <p data-i18n="about.p3">Tenho conhecimentos em Python, Java, HTML e CSS, além de desenvolvimento de sites e aplicativos. Busco constantemente ampliar minhas habilidades técnicas, explorar novas tecnologias e desenvolver soluções que unam funcionalidade, organização e uma boa experiência para o usuário.</p>
-            <p data-i18n="about.p4">Meu objetivo é conectar tecnologia e necessidades reais, colaborando com projetos e pessoas no Brasil e no mercado internacional.</p>
+          <div class="about-text reveal">
+            <p data-i18n="about.p1">Meu nome é Lívia Soares Lopes, tenho 24 anos e sou estudante de Ciência da Computação. Minha trajetória é orientada pelo interesse em desenvolvimento de software e pela criação de soluções digitais que resolvem problemas reais.</p>
+            <p data-i18n="about.p2">Hoje, sou estagiária na área de Engenharia de Inteligência Artificial na Ohmyweb, empresa sediada em Dubai, nos Emirados Árabes Unidos, onde também atuo como representante da empresa no Brasil.</p>
+            <p data-i18n="about.p3">Trabalho com Python, Java, HTML e CSS, além do desenvolvimento de sites e aplicativos. Gosto de aprender fazendo: busco ampliar minhas habilidades técnicas em projetos reais, sempre com atenção à funcionalidade, à organização e à experiência de quem usa. Meu objetivo é conectar tecnologia e necessidades verdadeiras, no Brasil e no mercado internacional.</p>
           </div>
 
-          <aside class="about-facts" data-i18n-attr="aria-label:about.factsLabel" aria-label="Resumo do perfil">
-            <h3 class="facts-title" data-i18n="about.factsTitle">Resumo do perfil</h3>
+          <aside class="about-facts reveal" data-i18n-attr="aria-label:about.factsLabel" aria-label="Resumo do perfil">
+            <h3 class="facts-title" data-i18n="about.factsTitle">Resumo</h3>
             <dl class="facts-list">
               <div class="fact">
                 <dt data-i18n="about.fact1.label">Idade</dt>
-                <dd><span data-i18n="about.fact1.value">24 anos</span></dd>
+                <dd data-i18n="about.fact1.value">24 anos</dd>
               </div>
               <div class="fact">
                 <dt data-i18n="about.fact2.label">Formação</dt>
-                <dd><span data-i18n="about.fact2.value">Ciência da Computação</span></dd>
+                <dd data-i18n="about.fact2.value">Ciência da Computação</dd>
               </div>
               <div class="fact">
-                <dt data-i18n="about.fact3.label">Atuação atual</dt>
-                <dd><span data-i18n="about.fact3.value">Estagiária em Engenharia de IA · Ohmyweb</span></dd>
+                <dt data-i18n="about.fact3.label">Agenda atual</dt>
+                <dd data-i18n="about.fact3.value">Estagiária em Engenharia de IA, Ohmyweb</dd>
               </div>
               <div class="fact">
-                <dt data-i18n="about.fact4.label">Sede da empresa</dt>
-                <dd><span data-i18n="about.fact4.value">Dubai, Emirados Árabes Unidos</span></dd>
+                <dt data-i18n="about.fact4.label">Empresa</dt>
+                <dd data-i18n="about.fact4.value">Sede em Dubai, EAU</dd>
               </div>
               <div class="fact">
                 <dt data-i18n="about.fact5.label">Atuação</dt>
-                <dd><span data-i18n="about.fact5.value">Brasil · Representação da Ohmyweb</span></dd>
+                <dd data-i18n="about.fact5.value">Brasil e mercado internacional</dd>
               </div>
             </dl>
           </aside>
@@ -163,86 +194,67 @@
       </div>
     </section>
 
-    <!-- ====================== COMPETÊNCIAS ====================== -->
-    <section class="section" id="competencias">
+    <!-- ====================== O QUE EU FAÇO ====================== -->
+    <section class="section section-wash" id="competencias">
       <div class="container">
-        <header class="section-head">
-          <p class="eyebrow" data-i18n="skills.eyebrow">Competências</p>
-          <h2 class="section-title" data-i18n="skills.title">Tecnologias e competências</h2>
-          <p class="section-lead" data-i18n="skills.lead">Separo o que já pratiquei em código do que estou aprofundando agora — com clareza sobre o que já domino e o que sigo aprendendo.</p>
+        <header class="section-head reveal">
+          <h2 class="section-title" data-i18n="skills.title">O que eu faço</h2>
+          <p class="section-lead" data-i18n="skills.lead">Um resumo honesto: o que já está na prática e o que estou construindo agora.</p>
         </header>
 
-        <div class="skills-grid">
-          <article class="skill-card reveal">
-            <div class="skill-head">
-              <span class="skill-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" class="icon"><path d="m8 6-6 6 6 6M16 6l6 6-6 6M13.5 4l-3 16"/></svg>
-              </span>
-              <span class="badge badge-solid" data-i18n="skills.badge.current">Conhecimento atual</span>
-            </div>
-            <h3 class="skill-title" data-i18n="skills.c1.title">Linguagens de programação</h3>
-            <ul class="tag-list">
-              <li>Python</li>
-              <li>Java</li>
-            </ul>
-          </article>
+        <dl class="craft-list reveal">
+          <div class="craft-row">
+            <dt class="craft-term">
+              <span class="craft-name" data-i18n="skills.row1.title">Sites e aplicativos</span>
+              <span class="craft-marker craft-marker-solid" data-i18n="skills.marker.practice">Na prática</span>
+            </dt>
+            <dd class="craft-desc">
+              <ul class="tag-list">
+                <li data-i18n="skills.row1.tag1">HTML5 e CSS3</li>
+                <li data-i18n="skills.row1.tag2">Páginas completas e acessíveis</li>
+                <li data-i18n="skills.row1.tag3">Interfaces de aplicativos</li>
+                <li data-i18n="skills.row1.tag4">Do rascunho ao site publicado</li>
+              </ul>
+            </dd>
+          </div>
 
-          <article class="skill-card reveal">
-            <div class="skill-head">
-              <span class="skill-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" class="icon"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M6 6.5h.01M9 6.5h.01"/></svg>
-              </span>
-              <span class="badge badge-solid" data-i18n="skills.badge.current">Conhecimento atual</span>
-            </div>
-            <h3 class="skill-title" data-i18n="skills.c2.title">Desenvolvimento web</h3>
-            <ul class="tag-list">
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li data-i18n="skills.c2.item3">Estruturação de páginas web</li>
-              <li data-i18n="skills.c2.item4">Criação e desenvolvimento de sites</li>
-            </ul>
-          </article>
+          <div class="craft-row">
+            <dt class="craft-term">
+              <span class="craft-name" data-i18n="skills.row2.title">Linguagens de programação</span>
+              <span class="craft-marker craft-marker-solid" data-i18n="skills.marker.practice">Na prática</span>
+            </dt>
+            <dd class="craft-desc">
+              <ul class="tag-list">
+                <li>Python</li>
+                <li>Java</li>
+                <li data-i18n="skills.row2.tag3">Fundamentos de lógica</li>
+              </ul>
+            </dd>
+          </div>
 
-          <article class="skill-card reveal">
-            <div class="skill-head">
-              <span class="skill-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" class="icon"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
-              </span>
-              <span class="badge badge-solid" data-i18n="skills.badge.current">Conhecimento atual</span>
-            </div>
-            <h3 class="skill-title" data-i18n="skills.c3.title">Desenvolvimento de aplicativos</h3>
-            <ul class="tag-list">
-              <li data-i18n="skills.c3.item1">Desenvolvimento de aplicativos</li>
-              <li data-i18n="skills.c3.item2">Construção de interfaces e funcionalidades digitais, de acordo com as habilidades efetivamente demonstradas nos projetos</li>
-            </ul>
-          </article>
-
-          <article class="skill-card skill-card-accent reveal">
-            <div class="skill-head">
-              <span class="skill-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" class="icon"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></svg>
-              </span>
-              <span class="badge badge-soft" data-i18n="skills.badge.interest">Área de interesse</span>
-            </div>
-            <h3 class="skill-title" data-i18n="skills.c4.title">Áreas de interesse profissional</h3>
-            <ul class="tag-list">
-              <li data-i18n="skills.c4.item1">Inteligência Artificial</li>
-              <li data-i18n="skills.c4.item2">Engenharia de Software</li>
-              <li data-i18n="skills.c4.item3">Desenvolvimento de soluções digitais</li>
-              <li data-i18n="skills.c4.item4">Tecnologia e inovação</li>
-            </ul>
-          </article>
-        </div>
+          <div class="craft-row">
+            <dt class="craft-term">
+              <span class="craft-name" data-i18n="skills.row3.title">Onde estou chegando</span>
+              <span class="craft-marker craft-marker-soft" data-i18n="skills.marker.study">Em estudo</span>
+            </dt>
+            <dd class="craft-desc">
+              <ul class="tag-list">
+                <li data-i18n="skills.row3.tag1">Inteligência Artificial</li>
+                <li data-i18n="skills.row3.tag2">Engenharia de software</li>
+                <li data-i18n="skills.row3.tag3">Produtos digitais</li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
       </div>
     </section>
 
     <!-- ====================== EXPERIÊNCIA ====================== -->
     <section class="section" id="experiencia">
       <div class="container">
-        <header class="section-head">
-          <p class="eyebrow" data-i18n="exp.eyebrow">Trajetória</p>
-          <h2 class="section-title" data-i18n="exp.title">Experiência profissional</h2>
-          <p class="section-lead" data-i18n="exp.lead">Uma experiência em ambiente internacional, conectando a Ohmyweb ao mercado brasileiro.</p>
+        <header class="section-head reveal">
+          <h2 class="section-title" data-i18n="exp.title">Experiência</h2>
+          <p class="section-lead" data-i18n="exp.lead">Aprendizado em ambiente internacional, com pé no Brasil.</p>
         </header>
 
         <ol class="timeline">
@@ -252,21 +264,17 @@
               <header class="exp-head">
                 <div>
                   <h3 class="exp-company">Ohmyweb</h3>
-                  <p class="exp-role" data-i18n="exp.role">Estagiária na área de Engenharia de Inteligência Artificial</p>
+                  <p class="exp-role" data-i18n="exp.role">Estagiária em Engenharia de Inteligência Artificial</p>
                 </div>
-                <span class="badge badge-soft" data-i18n="exp.period">Atual</span>
+                <span class="exp-badge" data-i18n="exp.period">Atual</span>
               </header>
 
-              <p class="exp-desc" data-i18n="exp.desc">Atuação em um ambiente profissional internacional, com foco na área de Engenharia de Inteligência Artificial e conexão entre a empresa e o mercado brasileiro.</p>
+              <p class="exp-desc" data-i18n="exp.desc">Trabalho em um ambiente profissional internacional, com foco em Engenharia de Inteligência Artificial e na conexão entre a empresa e o mercado brasileiro.</p>
 
               <ul class="exp-meta">
                 <li>
                   <svg class="icon icon-xs" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-                  <span data-i18n="exp.location">Dubai, Emirados Árabes Unidos</span>
-                </li>
-                <li>
-                  <svg class="icon icon-xs" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15 0 18M12 3c-2.5 2.7-2.5 15 0 18"/></svg>
-                  <span data-i18n="exp.base">Base da profissional: Brasil</span>
+                  <span data-i18n="exp.location">Sede em Dubai, Emirados Árabes Unidos</span>
                 </li>
                 <li>
                   <svg class="icon icon-xs" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
@@ -286,32 +294,29 @@
     </section>
 
     <!-- ====================== CONTATO ====================== -->
-    <section class="section section-soft" id="contato">
-      <div class="container contact-grid">
-        <div class="contact-intro">
-          <p class="eyebrow" data-i18n="contact.eyebrow">Contato</p>
-          <h2 class="section-title" data-i18n="contact.title">Vamos conversar sobre seu próximo projeto?</h2>
-          <p class="contact-text" data-i18n="contact.text">Estou aberta a conexões profissionais, oportunidades de colaboração e conversas sobre desenvolvimento web, aplicativos, software e inovação tecnológica. Entre em contato para conversarmos sobre suas ideias e necessidades.</p>
+    <section class="section contact" id="contato">
+      <div class="container">
+        <h2 class="contact-title reveal" data-i18n="contact.title">Vamos construir algo juntos?</h2>
+        <p class="contact-text reveal" data-i18n="contact.text">Estou aberta a conexões profissionais, colaborações e conversas sobre desenvolvimento web, aplicativos, software e inovação. Me chame para falarmos sobre a sua ideia: prometo escutar com atenção, como sempre faço.</p>
 
-          <div class="contact-actions">
-            <a class="btn btn-primary" href="https://wa.me/5547933835061" target="_blank" rel="noopener noreferrer">
-              <svg class="icon icon-xs" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5 5 16.8A8 8 0 1 1 8 19.3Z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg>
-              <span data-i18n="contact.ctaWhats">Chamar no WhatsApp</span>
-            </a>
-            <a class="btn btn-ghost" href="mailto:liviasoares.tech@gmail.com">
-              <svg class="icon icon-xs" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
-              <span data-i18n="contact.ctaMail">Enviar e-mail</span>
-            </a>
-          </div>
+        <div class="contact-actions reveal">
+          <a class="btn btn-primary" href="https://wa.me/5547933835061" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-xs" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5 5 16.8A8 8 0 1 1 8 19.3Z"/></svg>
+            <span data-i18n="contact.ctaWhats">Chamar no WhatsApp</span>
+          </a>
+          <a class="btn btn-ghost" href="mailto:liviasoares.tech@gmail.com">
+            <svg class="icon icon-xs" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+            <span data-i18n="contact.ctaMail">Enviar e-mail</span>
+          </a>
+        </div>
 
-          <div class="contact-social">
-            <a class="contact-social-btn contact-social-linkedin" href="https://www.linkedin.com/in/livia-soares-34a9643b7/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10v7M7.5 7.2v.1M11.5 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg>
-            </a>
-            <a class="contact-social-btn contact-social-github" href="https://github.com/liviacoding" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.3-4.3-2.2-6-2.7m12 5.2v-3.4c0-.9.1-1.5-.4-2 2.6-.3 5.4-1.3 5.4-5.9a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.7 3.5 5.7 3.8 5.7 3.8a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.3 10c0 4.6 2.8 5.6 5.4 5.9-.5.5-.6 1.1-.6 1.8v3.4"/></svg>
-            </a>
-          </div>
+        <div class="contact-social reveal">
+          <a class="social-btn" href="https://www.linkedin.com/in/livia-soares-34a9643b7/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" data-i18n-attr="aria-label:a11y.linkedin" aria-label="LinkedIn" title="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10v7M7.5 7.2v.1M11.5 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg>
+          </a>
+          <a class="social-btn" href="https://github.com/liviacoding" target="_blank" rel="noopener noreferrer" data-i18n-attr="aria-label:a11y.github" aria-label="GitHub" title="GitHub">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.3-4.3-2.2-6-2.7m12 5.2v-3.4c0-.9.1-1.5-.4-2 2.6-.3 5.4-1.3 5.4-5.9a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.7 3.5 5.7 3.8 5.7 3.8a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.3 10c0 4.6 2.8 5.6 5.4 5.9-.5.5-.6 1.1-.6 1.8v3.4"/></svg>
+          </a>
         </div>
       </div>
     </section>
@@ -323,14 +328,14 @@
       <div class="footer-brand">
         <span class="brand-mark" aria-hidden="true">LS</span>
         <p class="footer-name">Lívia Soares Lopes</p>
-        <p class="footer-tagline" data-i18n="footer.tagline">Desenvolvimento de software, sites e aplicativos com interesse em inteligência artificial.</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">Desenvolvimento de software, sites e aplicativos, com crescente interesse em inteligência artificial.</p>
       </div>
 
       <nav class="footer-nav" data-i18n-attr="aria-label:footer.navLabel" aria-label="Navegação do rodapé">
         <h2 class="footer-title" data-i18n="footer.navTitle">Navegação</h2>
         <ul>
           <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
-          <li><a href="#competencias" data-i18n="nav.skills">Competências</a></li>
+          <li><a href="#competencias" data-i18n="nav.skills">O que eu faço</a></li>
           <li><a href="#experiencia" data-i18n="nav.experience">Experiência</a></li>
           <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
         </ul>
@@ -340,7 +345,8 @@
         <h2 class="footer-title" data-i18n="footer.contactTitle">Contato</h2>
         <ul>
           <li><a href="mailto:liviasoares.tech@gmail.com" data-i18n="footer.email">E-mail</a></li>
-          <li><a href="https://wa.me/5547933835061" target="_blank" rel="noopener noreferrer" data-i18n="contact.whatsapp">WhatsApp</a></li>
+          <li><a href="https://wa.me/5547933835061" target="_blank" rel="noopener noreferrer" data-i18n="footer.whatsapp">WhatsApp</a></li>
+          <li><a href="https://www.linkedin.com/in/livia-soares-34a9643b7/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" data-i18n="footer.linkedin">LinkedIn</a></li>
         </ul>
       </div>
     </div>
