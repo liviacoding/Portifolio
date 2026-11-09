@@ -1068,6 +1068,15 @@ a, button { -webkit-tap-highlight-color: transparent; }
 }
 
 @media (max-width: 560px) {
+  /* Cabeçalho compacto: em 360-430px nada mais cabe com o nome completo */
+  .header-inner { gap: 8px; }
+  .header-actions { gap: 4px; }
+  .brand-text { display: none; }
+  .icon-btn { width: 34px; height: 34px; }
+  .lang-switch { padding: 2px; }
+  .lang-btn { padding: 4px 8px; font-size: 0.72rem; }
+  .nav-toggle { width: 34px; height: 34px; }
+
   .hero-actions .btn,
   .contact-actions .btn { width: 100%; justify-content: center; }
 
